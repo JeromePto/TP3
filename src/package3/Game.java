@@ -65,7 +65,7 @@ public class Game {
   private void playMan() throws Exception {
     labChoice();
     lab.initFromFile(labFile);
-    printLab();
+    lab.printLab(labFile);
   }
   
   private void labChoice() throws IOException {
@@ -73,14 +73,6 @@ public class Game {
     labFile = new File(new Scanner(System.in).nextLine());
     if (!labFile.canRead()) {
       throw new IOException("Unable to read the file");
-    }
-  }
-  
-  private void printLab() throws FileNotFoundException {
-    Scanner sc = new Scanner(labFile);
-    sc.nextLine();
-    while(sc.hasNextLine()) {
-      System.out.println(sc.nextLine());
     }
   }
   

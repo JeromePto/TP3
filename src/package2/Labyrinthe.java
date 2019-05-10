@@ -127,4 +127,12 @@ public class Labyrinthe {
   public boolean getWin() {
     return posX == endX && posY == endY;
   }
+  
+  public void printLab(File labFile) throws FileNotFoundException {
+    Scanner sc = new Scanner(labFile);
+    sc.nextLine();
+    while(sc.hasNextLine()) {
+      System.out.println(sc.nextLine());
+    }
+  }
 }
